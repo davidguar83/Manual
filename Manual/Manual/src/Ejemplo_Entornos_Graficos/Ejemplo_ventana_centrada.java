@@ -59,6 +59,9 @@ public class Ejemplo_ventana_centrada {
         
         setIconImage(miLogo);
         
+        
+       // setIconImage(mipantalla.getImage("logo.jpg"));    modo abrebiado del los dos lineas de codigos anteriores
+        
     }
     
     
