@@ -33,7 +33,7 @@ class MarcoTexto extends JFrame{
         
         setBounds(200, 200, 400, 400);
         
-        
+        hola
         
         
     }
