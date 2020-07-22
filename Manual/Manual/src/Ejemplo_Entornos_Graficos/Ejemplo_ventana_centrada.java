@@ -53,7 +53,9 @@ public class Ejemplo_ventana_centrada {
         
         setTitle("Marco centrado por toolkit");
         
-        Image miLogo = mipantalla.getImage("src/Ejemplo_Entornos_Graficos/logo.jpg");
+        //Image miLogo = mipantalla.getImage("Manual/src/Ejemplo_Entornos_Graficos/logo.jpg");  asi estariamos obligando a guardar la imagen dentro de la carpeta Ejemplos entormos graficos
+        
+        Image miLogo = mipantalla.getImage("logo.jpg");
         
         setIconImage(miLogo);
         
