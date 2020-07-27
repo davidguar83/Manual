@@ -14,51 +14,36 @@ import javax.swing.*;
  * @author david
  */
 public class Ejemplo_Letras_Fuentes {
-    
-    
-    public static void main(String[]args){
-        
-        String fuentes= JOptionPane.showInputDialog("Introduce fuente letras");
-        
-        boolean comprobacionletra=false;
-        
-        
-        String [] letrasfuentes= GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
-        
-        
-        
-        for(String nombreLetras: letrasfuentes){
-            
-            
-            if(nombreLetras.equals(fuentes)){
-                
-                comprobacionletra=true;
-                
+
+    public static void main(String[] args) {
+
+        String fuentes = JOptionPane.showInputDialog("Introduce fuente letras");
+
+        boolean comprobacionletra = false;
+
+        String[] letrasfuentes = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
+
+        for (String nombreLetras : letrasfuentes) {
+
+            if (nombreLetras.equals(fuentes)) {
+
+                comprobacionletra = true;
+
             }
-            
-          //  System.out.println(nombreLetras); 
-            
+
+            //  System.out.println(nombreLetras); 
         }
-        
-        
-        if(comprobacionletra){
-            
-            
+
+        if (comprobacionletra) {
+
             System.out.println("Fuente de letra instalada");
-            
-            
-        }else{
-            
-            
+
+        } else {
+
             System.out.println("Fuente de lerta no instalada");
-            
+
         }
-        
-        
-        
-        
-        
-        
+
     }
-    
+
 }

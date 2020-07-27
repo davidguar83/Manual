@@ -58,8 +58,8 @@ class LaminaDibujos extends JPanel {
     public void paintComponent(Graphics g) {
 
         super.paintComponents(g);
-        
-        g.drawString("HOLA", 500,250);
+
+        g.drawString("HOLA", 500, 250);
 
         g.drawRect(50, 50, 200, 200);
 
