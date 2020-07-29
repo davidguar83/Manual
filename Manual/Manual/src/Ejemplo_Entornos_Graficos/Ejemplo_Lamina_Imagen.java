@@ -39,7 +39,7 @@ class MarcoImagen extends JFrame {
 
         setTitle("Lamina con imagen");
 
-        setBounds(500, 500, 500, 500);
+        setBounds(300, 200, 700, 700);
 
         LaminaImagen milaminaimagen = new LaminaImagen();
 
@@ -51,30 +51,67 @@ class MarcoImagen extends JFrame {
 
 class LaminaImagen extends JPanel {
 
+    private Image imagen;
+
+    public LaminaImagen() {
+
+        try {
+
+            imagen = ImageIO.read(new File("COCHE.png"));
+
+        } catch (IOException e) {
+
+            System.out.println("La imagen no se encuentra en la ruta descrita");
+
+        }
+
+    }
+
     @Override
     protected void paintComponent(Graphics g) {
 
         super.paintComponent(g);
 
         //Graphics2D g2 = (Graphics2D)g;
-        File miimagen = new File("COCHEee.png");
-        
-        
-        try{
-            
-           // imagen= ImageIO.read(new File("COCHE.png"));              forma abrebiado de declaracion de la imagen
-       imagen = ImageIO.read(miimagen);
-        }
-        catch(IOException e){
-            
-            System.out.println("La imagen no se encuentra en la ruta descrita");
-            
-        }
-        
-        g.drawImage(imagen, 5, 5, null);
-        
-    }
+        File miimagen = new File("COCHE.png");
 
-    private Image imagen;
+        /*try {
+
+        // imagen= ImageIO.read(new File("COCHE.png"));              forma abrebiado de declaracion de la imagen
+            
+        imagen = ImageIO.read(miimagen);
+
+        } catch (IOException e) {
+
+            System.out.println("La imagen no se encuentra en la ruta descrita");
+
+        }*/
+        
+        
+        // SI NO SABEMOS EL TAMAÑO DE LA IMAGEN LA CONSEGUIMOS CON LAAS DOS LINEAS SIGUIENTES
+        
+        
+        
+        int anchoImagen = imagen.getWidth(this);
+        int altoImagen = imagen.getHeight(this);
+
+        g.drawImage(imagen, 0, 0, null);
+
+        for (int i = 0; i < 700; i++) {
+
+            for (int j = 0; j < 700; j++) {
+                
+                if(i+j>0){
+                
+           
+
+                g.copyArea(0, 0, anchoImagen, altoImagen, anchoImagen * i, altoImagen * j);        // SI NO SE PUSIERA EL IF, SE DIBUJA LA PRIMERA IMAGEN Y LA COPYA SE MONTA ENCIMA DE OTRA 
+            }
+            }
+
+        }
+
+        //g.copyArea(0, 0, 300, 300, 300, 300);          //sirve para copiar una imagen, 2 primeros parametros son para imdicar la localizacion del objeto a copiar, las 3y4 cuartas el tamaño que queremos copiar y las dos ultimas el lugar donde vamos a copiar la imagen.
+    }
 
 }
