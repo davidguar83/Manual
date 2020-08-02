@@ -20,7 +20,7 @@ public class Ejemplo_Evento_Botones {
     
      public static void main(String[] args) {
          
-         MarcoBotones marcoboton = new MarcoBotones();
+         MarcoBotonesII marcoboton = new MarcoBotonesII();
          
          
          marcoboton.setVisible(true);
@@ -39,16 +39,16 @@ public class Ejemplo_Evento_Botones {
 }
     
     
-    class MarcoBotones extends JFrame {
+    class MarcoBotonesII extends JFrame {
 
-        public MarcoBotones() {
+        public MarcoBotonesII() {
             
             setTitle(" Marco Botones");
             
             
             setBounds(700, 300, 600, 600);
             
-            MiLaminaBoton milaminaboton = new MiLaminaBoton();
+            MiLaminaBotonII milaminaboton = new MiLaminaBotonII();
             
             add(milaminaboton);
             
@@ -67,26 +67,26 @@ public class Ejemplo_Evento_Botones {
 
 
 
-class MiLaminaBoton extends JPanel implements ActionListener{
+class MiLaminaBotonII extends JPanel implements ActionListener{
     
     
-    JButton botonRojo = new JButton(" Rojo ");
+    JButton botonRojoII = new JButton(" Rojo ");
     
     JButton botonVerde = new JButton(" Verde ");
     
     JButton botonAzul = new JButton(" Azul ");
 
-    public MiLaminaBoton() {
+    public MiLaminaBotonII() {
         
         
-        add(botonRojo);
+        add(botonRojoII);
         
         add(botonAzul);
         
         add(botonVerde);
         
         
-        botonRojo.addActionListener(this);
+        botonRojoII.addActionListener(this);
         
         botonAzul.addActionListener(this);
         
@@ -99,7 +99,7 @@ class MiLaminaBoton extends JPanel implements ActionListener{
              
             Object botonPulsado=e.getSource();
              
-             if (botonPulsado==botonRojo){
+             if (botonPulsado==botonRojoII){
              
             
            setBackground(Color.red);
