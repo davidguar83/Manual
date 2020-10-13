@@ -43,7 +43,7 @@ class Escribiendo{
         
         
         try {
-            FileWriter escritura = new FileWriter("C:/Users/david/Desktop/prueba clase file/texto_escritura.txt");
+            FileWriter escritura = new FileWriter("C:/Users/david/Desktop/prueba clase file/texto_escritura.txt");   //si ponemos(, true) lo que hace es escribir el texto de nuevo, sino lo que hace es cobreescribir el texto existente
             
             for( int i=0;i<frase.length();i++){
                 
