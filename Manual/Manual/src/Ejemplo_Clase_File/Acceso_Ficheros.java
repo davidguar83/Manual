@@ -18,33 +18,64 @@ public class Acceso_Ficheros {
     
     public static void main(String[] args) {
         
-        File ruta=new File("c:" + File.separator + "Users" + File.separator + "david" + File.separator + "Desktop");
+        File ruta=new File("c:" + File.separator + "Users" + File.separator + "david" + File.separator + "Desktop" + File.separator + "prueba clase file");
+       // File ruta=new File("C:/Users/david/Desktop/prueva clase file");
         
-        System.out.println(ruta.getAbsolutePath());
         
-        System.out.println(ruta.exists());
+        //System.out.println(ruta.getAbsolutePath());
         
-        String[] nombres_archivos=ruta.list();
+       // System.out.println(ruta.exists());
         
-        for(int i=0;i<nombres_archivos.length;i++){
+        String[] lista_carpeta1=ruta.list();
         
-            System.out.println(nombres_archivos[i]);
+        for(int i=0;i<lista_carpeta1.length;i++){
+        
+            System.out.println(lista_carpeta1[i]);
             
-            File f = new File(ruta.getAbsolutePath(),nombres_archivos[i] );
+            File ruta2 = new File(ruta.getAbsolutePath(),lista_carpeta1[i] );
             
-            if(f.isDirectory()){
+          
+            
+            if(ruta2.isDirectory()){
                 
-                String[]archivos_subcarpeta=f.list();
+                 
                 
-                for(int j=0;j<archivos_subcarpeta.length;j++){
+                String[]carpeta2=ruta2.list();
+                
+                for(int j=0;j<carpeta2.length;j++){
                     
-                    System.out.println(archivos_subcarpeta[j]);
+                    System.out.println(carpeta2[j]);
                     
+                    File ruta3 = new File(ruta.getAbsolutePath(),carpeta2[j] );
+                   
                     
-                }
+                    if (ruta3.isDirectory()){
+                        
+                        String[]carpeta3=ruta3.list();
+                        
+                        for (int k=0;k<carpeta3.length;k++){
+                        
+                        System.out.println(carpeta3[k]);
+                        
+                        
+                        }
+                        
+                    }else {
+                    
+                
+                        ruta3.delete();
+                        
+                        
+                        
+                        }
                 
                 
               
+                }
+                
+            }else {
+                
+                ruta2.delete();
                 
                 
             }

@@ -43,7 +43,7 @@ class Escribiendo{
         
         
         try {
-            FileWriter escritura = new FileWriter("C:/Users/david/Desktop/prueba clase file/texto_escritura.txt");   //si ponemos(, true) lo que hace es escribir el texto de nuevo, sino lo que hace es cobreescribir el texto existente
+            FileWriter escritura = new FileWriter("C:/Users/david/Desktop/prueba clase file/texto_escritura.txt");   //si ponemos(, true) lo que hace es escribir el texto de nuevo, sino lo que hace es sobreescribir el texto existente
             
             for( int i=0;i<frase.length();i++){
                 
@@ -56,7 +56,7 @@ class Escribiendo{
             escritura.close();
             
         } catch (IOException e) {
-            System.out.println("Archibo o escontrado");
+            System.out.println("Archivo no escontrado");
         }
         
         
