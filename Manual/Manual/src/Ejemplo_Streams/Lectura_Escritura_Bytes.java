@@ -28,7 +28,7 @@ public class Lectura_Escritura_Bytes {
         
         try{
             
-            FileInputStream archi_lectura = new FileInputStream("C:/Users/david/Desktop/prueba clase file/COCHE.png");
+            FileInputStream archi_lectura = new FileInputStream("C:/Users/david/Desktop/prueba clase file/texto1.txt");
             
             
             boolean final_archi=false;
@@ -81,7 +81,7 @@ public class Lectura_Escritura_Bytes {
         
         try{
             
-            FileOutputStream archivo_nuevo= new FileOutputStream("C:/Users/david/Desktop/prueba clase file/Copia_COCHE.png");
+            FileOutputStream archivo_nuevo= new FileOutputStream("C:/Users/david/Desktop/prueba clase file/Copia_texto1.txt");
             
             for(int i=0;i<datos_nuevo_fichero.length;i++){
                 
