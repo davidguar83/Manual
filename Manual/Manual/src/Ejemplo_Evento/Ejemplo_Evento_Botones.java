@@ -100,6 +100,9 @@ class MiLaminaBotonII extends JPanel implements ActionListener{
             Object botonPulsado=e.getSource();
              
              if (botonPulsado==botonRojoII){
+                 
+                 
+                 
              
             
            setBackground(Color.red);
